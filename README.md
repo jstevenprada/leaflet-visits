@@ -28,7 +28,7 @@ composer install
 npm install
 ```
 
-Crear archivo .env en base a .env.example tener en cuenta puerto y contraseña de la base de datos.
+Crear archivo ```.env``` en base a ```.env.example``` tener en cuenta puerto y contraseña de la base de datos.
 
 Inciar el servidor
 
