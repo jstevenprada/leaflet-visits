@@ -20,6 +20,11 @@ const form = useForm({
     name: user.name,
     email: user.email,
 });
+
+const page = usePage();
+
+console.log('Hola')
+console.log(page.props)
 </script>
 
 <template>

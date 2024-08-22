@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Visits;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Http\Requests\Visit\StoreRequest;
@@ -15,9 +16,17 @@ class VisitsController extends Controller
      */
     public function index()
     {
-        $visits = Visits::all();
+        $visits = Visits::orderBy('id')->get();
         return Inertia::render('Visitas/Index',compact('visits'));
     }
+
+    // Display all the visits
+    public function indexAll()
+    {
+        $visits = Visits::all();
+        return $visits;
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -51,7 +60,6 @@ class VisitsController extends Controller
      */
     public function edit(Visits $visits)
     {
-        // dd($visits);
         return Inertia::render('Visitas/Edit',compact('visits'));
     }
 
