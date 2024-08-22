@@ -26,8 +26,8 @@ class StoreRequest extends FormRequest
         return [
             'name' => 'required|min:3|max:150',
             'email' => 'required|min:12|max:150|email:rfc',
-            'latitude' => 'required|decimal:0,7|between:-999.9999999,999.9999999',
-            'longitude' => 'required|decimal:0,7|between:-999.9999999,999.9999999'
+            'latitude' => 'required|decimal:0,7|between:-90.0000000,90.0000000',
+            'longitude' => 'required|decimal:0,7|between:-180.0000000,180.0000000'
         ];
     }
 }
